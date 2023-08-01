@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highlight HTML Content</title>
+</head>
+<body>
+  <h1>Highlight HTML Content</h1>
+  <p>This example shows how to highlight HTML content using JavaScript.</p>
+  <script src="index.js"></script>
+  <script>
+    const htmlContent = `
+      <p><span>Hi There I am Mukesh from Mumbai,<br><br>Headline: Currently pursuing my B-tech in computer science and engineering from lovely professional university, punjab.
+         <br><br>Project: Query Hive React App (queryhive.netlify.app) <br><br>           
+Domain: Web Application<br><br> Languages: React Js, Node Js <br><br>Developed an innovative application that facilitates students in posting their coding doubts, while providing prompt solutions. <br><br>Currently spearheading efforts to enhance the platform by incorporating additional features such as webcam integration and a compiler. 
+<br><br>Demonstrating proactive initiative in continuously improving the user experience and expanding the functionality of the application.
+<br><br>Read the 
+         full article <a href="https://queryhive.netlify.app/">here</a><br><br>-------------------------------------
+         <br><br>You received 
+         this because you are subscribed to news related to <a href="https://github.com/mukesh98ch?tab=repositories">My GitHub</a>, you can visit for more information.<br><br>Copyright of PR Newswire. All Rights Reserved. Terms and Conditions | Privacy Policy. To stop PR Newswire emails from getting removed by email filters please add our address (noreply@prnewswire.com) to your email address book.
+          Registered Office: 3 Spring Mews, London SE11 5AN. Tel: +44 (0) 207 8405100. <br><br><b>Here is my resume, 
+         please click <a href="https://drive.google.com/file/d/17blYQQXwXsH_OGwxtiUl_Bi6wxz8hu-y/view?usp=sharing">here</a>.</b><br><br>-------------------------------------<br><br><img src="./Image/logo.png" alt="QueryHive" style="width:100px;height:100px;"></span></p>
+    `;
+    const plainText = `
+      Hi There
+      Headline: Energix Closes $520 Million Financing and Tax Equity Deal to Fund New Projects
+      Summary: Two deals with Morgan Stanley Renewables Inc. and Santander CIB will help 
+      finance the construction and operation of six utility Equity scale solar…
+    `;
+    const plainTextPositions = [
+      { start: 241, end: 247 },
+      { start: 518, end: 525 },
+    ];
+    const highlightedHTMLContent = highlightHTMLContent(htmlContent, plainText, plainTextPositions);
+    document.querySelector('body').innerHTML = highlightedHTMLContent;
+  </script>
+</body>
+</html>
